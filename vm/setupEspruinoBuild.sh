@@ -1,11 +1,11 @@
 cd /home/vagrant
 
 # run vagrant post install
-if [ -f /home/vagrant/postinstall.sh ];
-then
-  ./postinstall.sh
-  rm postinstall.sh
-fi
+#if [ -f /home/vagrant/postinstall.sh ];
+#then
+#  ./postinstall.sh
+#  rm postinstall.sh
+#fi
 
 # TODO: there's probably a better way to handle this, but this gets around warnings
 git config --global user.email "no@no.com"
@@ -40,7 +40,8 @@ then
 
   # make!
   cd arm-eabi-toolchain
-  PROCS=2 make install-cross
+  #PROCS=2 make install-cross
+  make install-cross
 
   # add tools path
   cd ../
